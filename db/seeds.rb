@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Thermostat.create(:household_token => "h121", :location => { :city => "hyderabad" })
+Thermostat.create(:household_token => "h122", :location => { :city => "hyderabad" })
+Thermostat.create(:household_token => "h123", :location => { :city => "hyderabad" })
+Thermostat.create(:household_token => "h124", :location => { :city => "hyderabad" })
+Thermostat.create(:household_token => "h125", :location => { :city => "hyderabad" })

@@ -3,22 +3,18 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+- make sure redis server is on
+- bundle exec sidekiq
 
-* Ruby version
+- rails db:create
+- rails db:migrate
+- rails db:seed
+- rails s
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+urls:
+ get /thermostats
+ post /thermostats
+ get /thermostats/:household_token
+ post /thermostats/:household_token/readings     
+ get /thermostats/:household_token/readings/:tracking_number
+ get /thermostats/:household_token/stats
