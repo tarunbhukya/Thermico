@@ -12,9 +12,9 @@ application up and running.
 - rails s
 
 urls:
- get /thermostats
- post /thermostats
- get /thermostats/:household_token
- post /thermostats/:household_token/readings     
- get /thermostats/:household_token/readings/:tracking_number
- get /thermostats/:household_token/stats
+ - get /thermostats
+ - post /thermostats
+ - get /thermostats/:household_token
+ - post /thermostats/:household_token/readings     
+ - get /thermostats/:household_token/readings/:tracking_number
+ - get /thermostats/:household_token/stats
