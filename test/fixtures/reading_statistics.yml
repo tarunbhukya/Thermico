@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  thermostat_id: 1
+  number_of_readings: 1
+  stemperature: 1.5
+  shumidity: 1.5
+  sbattery_charge: 1.5
+  atemperature: 1.5
+  ahumidity: 1.5
+  abattery_charge: 1.5
+  max_temperature: 1.5
+  max_humidity: 1.5
+  max_battery_charge: 1.5
+  min_temperature: 1.5
+  min_humidity: 1.5
+  min_battery_charge: 1.5
+
+two:
+  thermostat_id: 2
+  number_of_readings: 1
+  stemperature: 1.5
+  shumidity: 1.5
+  sbattery_charge: 1.5
+  atemperature: 1.5
+  ahumidity: 1.5
+  abattery_charge: 1.5
+  max_temperature: 1.5
+  max_humidity: 1.5
+  max_battery_charge: 1.5
+  min_temperature: 1.5
+  min_humidity: 1.5
+  min_battery_charge: 1.5

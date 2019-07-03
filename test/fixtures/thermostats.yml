@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  household_token: MyText
+  location: {
+      "city": "city1"
+    }
+
+two:
+  household_token: MyText
+  location: {
+      "city": "city2"
+    }

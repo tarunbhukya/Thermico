@@ -1,0 +1,1263 @@
+  [1m[35m (372.7ms)[0m  [1m[35mCREATE DATABASE "demoapp2_development" ENCODING = 'unicode'[0m
+  [1m[35m (402.8ms)[0m  [1m[35mCREATE DATABASE "demoapp2_test" ENCODING = 'unicode'[0m
+  [1m[35m (28.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3436061446375584915)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-03 17:46:20.684665"], ["updated_at", "2019-07-03 17:46:20.684665"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3436061446375584915)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/aggregator/" for 10.0.2.2 at 2019-07-03 17:54:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/admin/aggregator"):
+  
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-07-03 17:54:52 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.9ms | Allocations: 201)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 878)
+
+
+Started GET "/favicon.ico" for 10.0.2.2 at 2019-07-03 17:54:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-07-03 17:55:15 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.0ms | Allocations: 190)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 724)
+
+
+Started GET "/th" for 10.0.2.2 at 2019-07-03 18:29:02 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/th"):
+  
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tarun/index" for 10.0.2.2 at 2019-07-03 18:29:12 +0000
+Processing by TarunController#index as HTML
+<Redis::Namespace v1.6.0 with client v4.1.2 for redis://127.0.0.1:6379/0/demoapp2>
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 96)
+
+
+Started GET "/tarun/index" for 10.0.2.2 at 2019-07-03 18:29:19 +0000
+Processing by TarunController#index as HTML
+<Redis::Namespace v1.6.0 with client v4.1.2 for redis://127.0.0.1:6379/0/demoapp2>
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 45)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-03 18:29:23 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.1ms | Allocations: 195)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 863)
+
+
+Started GET "/taruns/index" for 10.0.2.2 at 2019-07-03 18:29:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/taruns/index"):
+  
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tarun/index" for 10.0.2.2 at 2019-07-03 18:29:36 +0000
+Processing by TarunController#index as HTML
+<Redis::Namespace v1.6.0 with client v4.1.2 for redis://127.0.0.1:6379/0/demoapp2>
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 43)
+
+
+Started GET "/taruns/index" for 10.0.2.2 at 2019-07-03 18:30:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/taruns/index"):
+  
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tarun/index" for 10.0.2.2 at 2019-07-03 18:30:35 +0000
+Processing by TarunController#index as HTML
+<Redis::Namespace v1.6.0 with client v4.1.2 for redis://127.0.0.1:6379/0/demoapp2>
+1
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms | Allocations: 183)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3436061446375584915)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateThermostats (20190703183404)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "thermostats" ("id" bigserial primary key, "household_token" text NOT NULL, "location" jsonb DEFAULT '{}' NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE  INDEX  "index_thermostats_on_location" ON "thermostats"  ("location")[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_thermostats_on_household_token" ON "thermostats"  ("household_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190703183404"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3436061446375584915)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3436061446375584915)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReadings (20190703183638)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "readings" ("id" bigserial primary key, "thermostat_id" integer, "tracking_number" integer, "temperature" float DEFAULT 0.0, "humidity" float DEFAULT 0.0, "battery_charge" float DEFAULT 0.0, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE  INDEX  "index_readings_on_tracking_number" ON "readings"  ("tracking_number")[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE  INDEX  "index_readings_on_thermostat_id" ON "readings"  ("thermostat_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190703183638"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3436061446375584915)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3436061446375584915)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReadingStatistics (20190703184032)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "reading_statistics" ("id" bigserial primary key, "thermostat_id" integer, "number_of_readings" integer DEFAULT 0, "stemperature" float DEFAULT 0.0, "shumidity" float DEFAULT 0.0, "sbattery_charge" float DEFAULT 0.0, "atemperature" float DEFAULT 0.0, "ahumidity" float DEFAULT 0.0, "abattery_charge" float DEFAULT 0.0, "max_temperature" float DEFAULT 0.0, "max_humidity" float DEFAULT 0.0, "max_battery_charge" float DEFAULT 0.0, "min_temperature" float, "min_humidity" float, "min_battery_charge" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190703184032"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3436061446375584915)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ta" for 10.0.2.2 at 2019-07-03 19:00:40 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ta"):
+  
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/thermostats" for 10.0.2.2 at 2019-07-03 19:01:54 +0000
+Processing by ThermostatsController#index as HTML
+  [1m[36mThermostat Load (0.8ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats"[0m
+  ↳ app/controllers/thermostats_controller.rb:8:in `index'
+Completed 200 OK in 156ms (Views: 6.0ms | ActiveRecord: 3.6ms | Allocations: 3827)
+
+
+Started GET "/thermostats/1" for 10.0.2.2 at 2019-07-03 19:02:01 +0000
+Processing by ThermostatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mThermostat Load (0.3ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/thermostats_controller.rb:56:in `set_thermostat'
+Filter chain halted as :set_thermostat rendered or redirected
+Completed 404 Not Found in 12ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1253)
+
+
+Started GET "/thermostats" for 10.0.2.2 at 2019-07-03 19:02:06 +0000
+Processing by ThermostatsController#index as HTML
+  [1m[36mThermostat Load (0.6ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats"[0m
+  ↳ app/controllers/thermostats_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.6ms | Allocations: 856)
+
+
+Started GET "/thermostatssd" for 10.0.2.2 at 2019-07-03 20:17:33 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/thermostatssd"):
+  
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-07-03 21:12:18 +0000
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.5ms | Allocations: 201)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 872)
+
+
+Started GET "/thermostats" for 10.0.2.2 at 2019-07-03 21:12:27 +0000
+Processing by ThermostatsController#index as HTML
+  [1m[36mThermostat Load (0.7ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats"[0m
+  ↳ app/controllers/thermostats_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 8.9ms | ActiveRecord: 2.7ms | Allocations: 3088)
+
+
+Started GET "/" for 124.123.72.54 at 2019-07-03 21:15:59 +0000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 29.4ms | Allocations: 309)
+Completed 200 OK in 102ms (Views: 65.9ms | ActiveRecord: 0.0ms | Allocations: 1557)
+
+
+Started GET "/favicon.ico" for 124.123.72.54 at 2019-07-03 21:16:06 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:77:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/thermostats" for 124.123.72.54 at 2019-07-03 21:16:23 +0000
+Processing by ThermostatsController#index as */*
+  [1m[36mThermostat Load (1.2ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats"[0m
+  ↳ app/controllers/thermostats_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 9.9ms | ActiveRecord: 4.7ms | Allocations: 3159)
+
+
+Started GET "/thermostats/1" for 124.123.72.54 at 2019-07-03 21:16:28 +0000
+Processing by ThermostatsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mThermostat Load (0.3ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/thermostats_controller.rb:56:in `set_thermostat'
+Filter chain halted as :set_thermostat rendered or redirected
+Completed 404 Not Found in 51ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 2470)
+
+
+Started POST "/thermostats" for 124.123.72.54 at 2019-07-03 21:17:15 +0000
+Processing by ThermostatsController#create as */*
+  Parameters: {"thermostat"=>{"household_token"=>"h1234", "location"=>{}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/thermostats_controller.rb:20:in `create'
+  [1m[36mThermostat Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "h1234"], ["LIMIT", 1]]
+  ↳ app/controllers/thermostats_controller.rb:20:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/thermostats_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 87ms (Views: 0.3ms | ActiveRecord: 9.2ms | Allocations: 7486)
+
+
+Started POST "/thermostats" for 124.123.72.54 at 2019-07-03 21:17:30 +0000
+Processing by ThermostatsController#create as */*
+  Parameters: {"thermostat"=>{"household_token"=>"", "location"=>{"city"=>"hyderabad"}}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/thermostats_controller.rb:20:in `create'
+  [1m[36mThermostat Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", ""], ["LIMIT", 1]]
+  ↳ app/controllers/thermostats_controller.rb:20:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/thermostats_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 23ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3223)
+
+
+Started POST "/thermostats" for 124.123.72.54 at 2019-07-03 21:17:40 +0000
+Processing by ThermostatsController#create as */*
+  Parameters: {"thermostat"=>{"household_token"=>"1234", "location"=>{"city"=>"hyderabad"}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/thermostats_controller.rb:20:in `create'
+  [1m[36mThermostat Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/thermostats_controller.rb:20:in `create'
+  [1m[36mThermostat Create (2.9ms)[0m  [1m[32mINSERT INTO "thermostats" ("household_token", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["household_token", "1234"], ["location", "{\"city\":\"hyderabad\"}"], ["created_at", "2019-07-03 21:17:40.699785"], ["updated_at", "2019-07-03 21:17:40.699785"]]
+  ↳ app/controllers/thermostats_controller.rb:20:in `create'
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/thermostats_controller.rb:20:in `create'
+Completed 201 Created in 39ms (Views: 2.2ms | ActiveRecord: 6.0ms | Allocations: 4179)
+
+
+Started POST "/thermostats/1234" for 124.123.72.54 at 2019-07-03 21:17:50 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/thermostats/1234"):
+  
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:77:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/thermostats/1234" for 124.123.72.54 at 2019-07-03 21:18:03 +0000
+Processing by ThermostatsController#show as */*
+  Parameters: {"thermostat"=>{"household_token"=>"1234", "location"=>{"city"=>"hyderabad"}}, "id"=>"1234"}
+  [1m[36mThermostat Load (0.5ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/thermostats_controller.rb:56:in `set_thermostat'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 844)
+
+
+Started GET "/thermostats/1234/readings" for 124.123.72.54 at 2019-07-03 21:18:09 +0000
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ReadingsController):
+  
+actionpack (6.0.0.rc1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.0.rc1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0.rc1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0.rc1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0.rc1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0.rc1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0.rc1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0.rc1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0.rc1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+activerecord (6.0.0.rc1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:77:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/thermostats/1234/readings" for 124.123.72.54 at 2019-07-03 21:18:27 +0000
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ReadingsController):
+  
+actionpack (6.0.0.rc1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.0.rc1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0.rc1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0.rc1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0.rc1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0.rc1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0.rc1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0.rc1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0.rc1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+activerecord (6.0.0.rc1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0.rc1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/static.rb:126:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/host_authorization.rb:77:in `call'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:57:in `block in call'
+activesupport (6.0.0.rc1) lib/active_support/notifications.rb:182:in `instrument'
+actionpack (6.0.0.rc1) lib/action_dispatch/middleware/stack.rb:56:in `call'
+railties (6.0.0.rc1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/thermostats/1234/readings" for 124.123.72.54 at 2019-07-03 21:19:56 +0000
+Processing by ReadingsController#index as HTML
+  Parameters: {"thermostat_id"=>"1234"}
+  [1m[36mThermostat Load (0.8ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+  [1m[36mReading Load (0.7ms)[0m  [1m[34mSELECT "readings".* FROM "readings" WHERE "readings"."thermostat_id" = $1[0m  [["thermostat_id", 1]]
+  ↳ app/controllers/readings_controller.rb:7:in `index'
+Completed 200 OK in 73ms (Views: 14.2ms | ActiveRecord: 7.9ms | Allocations: 8875)
+
+
+Started GET "/thermostats/1234/readings" for 124.123.72.54 at 2019-07-03 21:20:08 +0000
+Processing by ReadingsController#index as */*
+  Parameters: {"thermostat"=>{"household_token"=>"1234", "location"=>{"city"=>"hyderabad"}}, "thermostat_id"=>"1234", "reading"=>{}}
+  [1m[36mThermostat Load (0.6ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+  [1m[36mReading Load (0.6ms)[0m  [1m[34mSELECT "readings".* FROM "readings" WHERE "readings"."thermostat_id" = $1[0m  [["thermostat_id", 1]]
+  ↳ app/controllers/readings_controller.rb:7:in `index'
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 1.2ms | Allocations: 1545)
+
+
+Started GET "/thermostats/1234/readings/1" for 124.123.72.54 at 2019-07-03 21:20:19 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"thermostat"=>{"household_token"=>"1234", "location"=>{"city"=>"hyderabad"}}, "thermostat_id"=>"1234", "id"=>"1", "reading"=>{}}
+  [1m[36mThermostat Load (0.4ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+  [1m[36mReading Load (0.7ms)[0m  [1m[34mSELECT "readings".* FROM "readings" WHERE "readings"."id" = $1 AND "readings"."thermostat_id" = $2 LIMIT $3[0m  [["id", 1], ["thermostat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:36:in `set_reading'
+Filter chain halted as :set_reading rendered or redirected
+Completed 404 Not Found in 16ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 1553)
+
+
+Started POST "/thermostats/1234/readings/" for 124.123.72.54 at 2019-07-03 21:21:19 +0000
+Processing by ReadingsController#create as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234"}
+  [1m[36mThermostat Load (0.4ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 1210)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/reading.rb:11:in `create_record'
+app/controllers/readings_controller.rb:17:in `create'
+Started POST "/thermostats/1234/readings/" for 124.123.72.54 at 2019-07-03 21:23:03 +0000
+Processing by ReadingsController#create as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234"}
+  [1m[36mThermostat Load (0.3ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:28:in `set_thermostat'
+=== before <ActionController::Parameters {"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23} permitted: true>
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 4.9ms | Allocations: 5580)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/reading.rb:11:in `create_record'
+app/controllers/readings_controller.rb:18:in `create'
+Started POST "/thermostats/1234/readings/" for 124.123.72.54 at 2019-07-03 21:23:35 +0000
+Processing by ReadingsController#create as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234"}
+  [1m[36mThermostat Load (0.3ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:28:in `set_thermostat'
+=== before <ActionController::Parameters {"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23} permitted: true>
+==== after<ActionController::Parameters {"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23} permitted: true>
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 7.0ms | Allocations: 5603)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/reading.rb:12:in `create_record'
+app/controllers/readings_controller.rb:18:in `create'
+Started POST "/thermostats/1234/readings/" for 124.123.72.54 at 2019-07-03 21:24:13 +0000
+Processing by ReadingsController#create as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234"}
+  [1m[36mThermostat Load (0.2ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 201 Created in 87ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 5871)
+
+
+Started GET "/thermostats/1234/readings/1" for 124.123.72.54 at 2019-07-03 21:24:22 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"1"}
+  [1m[36mThermostat Load (0.4ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 800)
+
+
+Started GET "/thermostats/1234/readings/1" for 124.123.72.54 at 2019-07-03 21:24:27 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"1"}
+  [1m[36mThermostat Load (0.3ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 797)
+
+
+Started GET "/thermostats/1234/readings/1" for 124.123.72.54 at 2019-07-03 21:24:29 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"1"}
+  [1m[36mThermostat Load (0.3ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 797)
+
+
+Started GET "/thermostats/1234/readings/1" for 124.123.72.54 at 2019-07-03 21:24:31 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"1"}
+  [1m[36mThermostat Load (0.3ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 797)
+
+
+Started GET "/thermostats/1234/readings/1" for 124.123.72.54 at 2019-07-03 21:24:34 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"1"}
+  [1m[36mThermostat Load (1.1ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 797)
+
+
+Started GET "/thermostats/1234/readings/1" for 124.123.72.54 at 2019-07-03 21:27:59 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"1"}
+  [1m[36mThermostat Load (0.9ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 797)
+
+
+Started GET "/thermostats/1234/readings/1" for 124.123.72.54 at 2019-07-03 21:28:02 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"1"}
+  [1m[36mThermostat Load (0.6ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 797)
+
+
+Started GET "/thermostats/1234/readings/1" for 124.123.72.54 at 2019-07-03 21:28:03 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"1"}
+  [1m[36mThermostat Load (0.4ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 797)
+
+
+Started POST "/thermostats/1234/readings/" for 124.123.72.54 at 2019-07-03 21:28:12 +0000
+Processing by ReadingsController#create as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234"}
+  [1m[36mThermostat Load (0.4ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+Completed 201 Created in 13ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1065)
+
+
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mThermostat Load (0.8ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" = $1 LIMIT $2[0m  [["tracking_number", 2], ["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Create (0.9ms)[0m  [1m[32mINSERT INTO "readings" ("thermostat_id", "tracking_number", "temperature", "humidity", "battery_charge", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["thermostat_id", 1], ["tracking_number", 2], ["temperature", 12.9], ["humidity", 1.2], ["battery_charge", 99.23], ["created_at", "2019-07-03 21:28:13.201547"], ["updated_at", "2019-07-03 21:28:13.201547"]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.8ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" = $1 LIMIT $2[0m  [["thermostat_id", 1], ["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[36mThermostat Load (0.5ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[36mReadingStatistic Create (0.9ms)[0m  [1m[32mINSERT INTO "reading_statistics" ("thermostat_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["thermostat_id", 1], ["created_at", "2019-07-03 21:28:13.300582"], ["updated_at", "2019-07-03 21:28:13.300582"]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:34:in `perform'
+  [1m[36mReadingStatistic Update (0.7ms)[0m  [1m[33mUPDATE "reading_statistics" SET "number_of_readings" = $1, "stemperature" = $2, "shumidity" = $3, "sbattery_charge" = $4, "atemperature" = $5, "ahumidity" = $6, "abattery_charge" = $7, "max_temperature" = $8, "max_humidity" = $9, "max_battery_charge" = $10, "min_temperature" = $11, "min_humidity" = $12, "min_battery_charge" = $13, "updated_at" = $14 WHERE "reading_statistics"."id" = $15[0m  [["number_of_readings", 1], ["stemperature", 12.9], ["shumidity", 1.2], ["sbattery_charge", 99.23], ["atemperature", 12.9], ["ahumidity", 1.2], ["abattery_charge", 99.23], ["max_temperature", 12.9], ["max_humidity", 1.2], ["max_battery_charge", 99.23], ["min_temperature", 12.9], ["min_humidity", 1.2], ["min_battery_charge", 99.23], ["updated_at", "2019-07-03 21:28:13.314533"], ["id", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:34:in `perform'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/thermo_stat_worker.rb:34:in `perform'
+Started GET "/thermostats/1234/readings/2" for 124.123.72.54 at 2019-07-03 21:28:27 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"2"}
+  [1m[36mThermostat Load (0.4ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+  [1m[36mReading Load (0.9ms)[0m  [1m[34mSELECT "readings".* FROM "readings" WHERE "readings"."id" = $1 AND "readings"."thermostat_id" = $2 LIMIT $3[0m  [["id", 2], ["thermostat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:36:in `set_reading'
+Filter chain halted as :set_reading rendered or redirected
+Completed 404 Not Found in 26ms (Views: 0.3ms | ActiveRecord: 4.1ms | Allocations: 1939)
+
+
+Started GET "/thermostats/1234/readings/" for 124.123.72.54 at 2019-07-03 21:28:40 +0000
+Processing by ReadingsController#index as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234"}
+  [1m[36mThermostat Load (0.4ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+  [1m[36mReading Load (0.6ms)[0m  [1m[34mSELECT "readings".* FROM "readings" WHERE "readings"."thermostat_id" = $1[0m  [["thermostat_id", 1]]
+  ↳ app/controllers/readings_controller.rb:7:in `index'
+Completed 200 OK in 90ms (Views: 74.6ms | ActiveRecord: 4.1ms | Allocations: 8009)
+
+
+Started GET "/thermostats/1234/readings/2" for 124.123.72.54 at 2019-07-03 21:28:54 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"2"}
+  [1m[36mThermostat Load (0.5ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+  [1m[36mReading Load (0.6ms)[0m  [1m[34mSELECT "readings".* FROM "readings" WHERE "readings"."id" = $1 AND "readings"."thermostat_id" = $2 LIMIT $3[0m  [["id", 2], ["thermostat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:36:in `set_reading'
+Filter chain halted as :set_reading rendered or redirected
+Completed 404 Not Found in 16ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 1326)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mThermostat Load (0.3ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" = $1 LIMIT $2[0m  [["tracking_number", 1], ["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Create (0.5ms)[0m  [1m[32mINSERT INTO "readings" ("thermostat_id", "tracking_number", "temperature", "humidity", "battery_charge", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["thermostat_id", 1], ["tracking_number", 1], ["temperature", 12.9], ["humidity", 1.2], ["battery_charge", 99.23], ["created_at", "2019-07-03 21:29:03.953402"], ["updated_at", "2019-07-03 21:29:03.953402"]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.4ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" = $1 LIMIT $2[0m  [["thermostat_id", 1], ["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:34:in `perform'
+  [1m[36mThermostat Load (0.4ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:34:in `perform'
+  [1m[36mReadingStatistic Update (0.6ms)[0m  [1m[33mUPDATE "reading_statistics" SET "number_of_readings" = $1, "stemperature" = $2, "shumidity" = $3, "sbattery_charge" = $4, "updated_at" = $5 WHERE "reading_statistics"."id" = $6[0m  [["number_of_readings", 2], ["stemperature", 25.8], ["shumidity", 2.4], ["sbattery_charge", 198.46], ["updated_at", "2019-07-03 21:29:03.969883"], ["id", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:34:in `perform'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/thermo_stat_worker.rb:34:in `perform'
+Started GET "/thermostats/1234/readings/2" for 124.123.72.54 at 2019-07-03 21:29:50 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"2"}
+  [1m[36mThermostat Load (0.3ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+  [1m[36mReading Load (0.3ms)[0m  [1m[34mSELECT "readings".* FROM "readings" WHERE "readings"."tracking_number" = $1 AND "readings"."thermostat_id" = $2 LIMIT $3[0m  [["tracking_number", 2], ["thermostat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:36:in `set_reading'
+Completed 200 OK in 48ms (Views: 0.5ms | ActiveRecord: 9.0ms | Allocations: 10721)
+
+
+Started GET "/thermostats/1234/readings/3" for 124.123.72.54 at 2019-07-03 21:29:57 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"3"}
+  [1m[36mThermostat Load (0.5ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+  [1m[36mReading Load (0.4ms)[0m  [1m[34mSELECT "readings".* FROM "readings" WHERE "readings"."tracking_number" = $1 AND "readings"."thermostat_id" = $2 LIMIT $3[0m  [["tracking_number", 3], ["thermostat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:36:in `set_reading'
+Filter chain halted as :set_reading rendered or redirected
+Completed 404 Not Found in 12ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 1326)
+
+
+Started GET "/thermostats/1234/readings/1" for 124.123.72.54 at 2019-07-03 21:30:04 +0000
+Processing by ReadingsController#show as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234", "id"=>"1"}
+  [1m[36mThermostat Load (0.7ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+  [1m[36mReading Load (1.1ms)[0m  [1m[34mSELECT "readings".* FROM "readings" WHERE "readings"."tracking_number" = $1 AND "readings"."thermostat_id" = $2 LIMIT $3[0m  [["tracking_number", 1], ["thermostat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:36:in `set_reading'
+Completed 200 OK in 17ms (Views: 0.8ms | ActiveRecord: 1.8ms | Allocations: 1445)
+
+
+Started GET "/thermostats/1234/readings/" for 124.123.72.54 at 2019-07-03 21:30:10 +0000
+Processing by ReadingsController#index as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "thermostat_id"=>"1234"}
+  [1m[36mThermostat Load (0.6ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/readings_controller.rb:27:in `set_thermostat'
+  [1m[36mReading Load (0.8ms)[0m  [1m[34mSELECT "readings".* FROM "readings" WHERE "readings"."thermostat_id" = $1[0m  [["thermostat_id", 1]]
+  ↳ app/controllers/readings_controller.rb:7:in `index'
+Completed 200 OK in 20ms (Views: 11.0ms | ActiveRecord: 1.4ms | Allocations: 2130)
+
+
+Started GET "/thermostats/1234/stats" for 124.123.72.54 at 2019-07-03 21:30:19 +0000
+Processing by ThermostatsController#stats as */*
+  Parameters: {"reading"=>{"temperature"=>12.9, "humidity"=>1.2, "battery_charge"=>99.23}, "id"=>"1234", "thermostat"=>{}}
+  [1m[36mThermostat Load (0.5ms)[0m  [1m[34mSELECT "thermostats".* FROM "thermostats" WHERE "thermostats"."household_token" = $1 LIMIT $2[0m  [["household_token", "1234"], ["LIMIT", 1]]
+  ↳ app/controllers/thermostats_controller.rb:56:in `set_thermostat'
+  [1m[36mReadingStatistic Load (0.9ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" = $1 LIMIT $2[0m  [["thermostat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/thermostats_controller.rb:45:in `stats'
+Completed 200 OK in 77ms (Views: 1.2ms | ActiveRecord: 8.8ms | Allocations: 12807)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.4ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.5ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.4ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.6ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.3ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.4ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.3ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.7ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.3ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.3ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.2ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReading Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "readings" WHERE "readings"."tracking_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/thermo_stat_worker.rb:8:in `perform'
+  [1m[36mReadingStatistic Load (0.4ms)[0m  [1m[34mSELECT "reading_statistics".* FROM "reading_statistics" WHERE "reading_statistics"."thermostat_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/workers/thermo_stat_worker.rb:11:in `perform'
